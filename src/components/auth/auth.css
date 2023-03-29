@@ -1,0 +1,10 @@
+.login, .logup {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    font-size: 15px;
+    text-transform: capitalize;
+}

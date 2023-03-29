@@ -1,0 +1,99 @@
+.content {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   column-gap: 20px;
+   row-gap: 50px;
+   padding: 20px;
+}
+
+.filter, .search {
+    margin: 20px;
+    padding: 20px;
+    width: 400px;
+}
+
+.filter input {
+    height: 40px;
+    width: 95%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.search input {
+    background-color: white;
+    border-radius: 15px;
+    height: 40px;
+    width: 80%;
+    text-align: center;
+}
+
+.search button {
+    margin-left: 5px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.search button:hover{
+    background-color: black;
+    color: white;
+    transition: 1.9s;
+}
+
+.input {
+    display: flex;
+    justify-content: space-around;
+}
+
+.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width:1050px) {
+    .content {
+        grid-template-columns: repeat(3, 1fr);
+    }    
+}
+
+@media screen and (max-width:850px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search input {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:545px) {
+    .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .input {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .search, .filter {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .search input {
+        width: 90%;
+    }
+    .search, .filter {
+        width: 250px;
+    }
+}

@@ -1,0 +1,9 @@
+.intro {
+    display: flex;
+    justify-content: space-around;
+}
+
+.detail-container {
+    margin: 20px;
+    padding: 10px;
+}

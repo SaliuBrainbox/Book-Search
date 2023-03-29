@@ -1,0 +1,18 @@
+
+.dropdown-container {
+    width: 150px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    opacity: 0.4;
+    z-index: 2;
+}
+
+a {
+    cursor: pointer;
+}

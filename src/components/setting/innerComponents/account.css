@@ -1,0 +1,18 @@
+li .dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+}
