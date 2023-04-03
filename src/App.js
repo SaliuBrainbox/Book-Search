@@ -12,6 +12,8 @@ import Library from './components/library/library';
 import Read from './components/innerComponents/read';
 import Account from './components/setting/innerComponents/account';
 import Display from './components/setting/innerComponents/display';
+import SignUpAuth from './components/auth/signUpAuth';
+import SignInAuth from './components/auth/signInAuth';
 
 
 function App() {
@@ -41,7 +43,14 @@ function App() {
             </Fragment>
         ) :
         (
-          <Auth></Auth>
+          <Fragment>
+              <Routes>
+                <Route path='/' element={<Auth></Auth>}>
+                  <Route index element={<SignInAuth></SignInAuth>}></Route>
+                </Route>
+                 <Route path='/signUp' element={<SignUpAuth></SignUpAuth>}></Route>
+              </Routes>
+          </Fragment>
         )
       }
     </div>
