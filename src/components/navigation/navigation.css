@@ -1,12 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 5px;
+    background: var(--color-text);
 }
 
 .logo {
     flex-basis: 1.5;
     margin-left: 30px;
+    padding-top: 10px;
+}
+
+.logo img {
+    border-radius: 50%;
 }
 
 .logo img {
@@ -58,6 +67,10 @@
 .list {
     display: flex;
     justify-content: space-around;
+}
+
+.control-panel {
+    margin-top: 10px;
 }
 
 .nav-menu {

@@ -1,8 +1,8 @@
 import React, { Fragment, useContext, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { LibraryContext } from '../../context/library'
-import { logut } from '../../firebase/firebase'
-import logo from '../../image/logo.png'
+import { logut } from '../../firebase/firebase'                
+import book from '../../image/book.jpg'
 import './navigation.css'
 import SettingDropdown from './settingDropdown'
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri'
@@ -19,7 +19,7 @@ const Navigation = () => {
     <Fragment >
       <div className='nav'>
         <div className="logo">
-          <img src= {logo} alt='logo' />
+          <img src= {book} alt='logo' />
         </div> 
         <div className='nav-list'>
           <ul className='list'>
