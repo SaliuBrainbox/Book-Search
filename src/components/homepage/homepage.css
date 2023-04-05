@@ -1,9 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+.home{
+    height: 100%;
+}
+
 .content {
    display: grid;
-   grid-template-columns: repeat(4, 1fr);
+   grid-template-columns: repeat(3, 1fr);
    column-gap: 20px;
    row-gap: 50px;
    padding: 20px;
+   flex: 2;
+   overflow: scroll;
+   overflow-x: hidden;
 }
 
 .filter, .search {
@@ -54,11 +65,44 @@
     font-size: 30px;
     font-weight: 400;
     text-transform: capitalize;
+    flex: 1;
+    height: 300px;
+}
+
+.main {
+    display: flex;
+    height: 400px;
+}
+
+.side-e, .side-c {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-right, .down {
+    background: gray;
+    margin: 5px;
+    border-radius: 15px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.down {
+    height: 70px;
+    background: var(--color-footer);
+    margin-bottom: 0;
+    bottom: 0px;
+    display: flex;
+    color: var(--color-text);
 }
 
 @media screen and (max-width:1050px) {
     .content {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }    
 }
 
@@ -66,6 +110,28 @@
     .content {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .main {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .side-right, .side-left {
+        display: none;
+    }
+
+    .side-e {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .side-c {
+        position: sticky;
+        width: 100%;
+        bottom: 0;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -95,5 +161,48 @@
     }
     .search, .filter {
         width: 250px;
+    }
+
+  
+}
+
+@media screen and (min-height: 700px) {
+    .main {
+        height: 500px;
+    }
+
+    .content, .empty{
+        flex: 2;
+    }
+
+    .side-right {
+        height: 400px;
+    }
+
+    @media screen and (max-width:600px) {
+        .main {
+            height: auto;
+        }
+
+        .side-e {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .side-c {
+            position: sticky;
+            width: 100%;
+            bottom: 0;
+        }
+    }
+
+}
+
+@media screen and (min-height:1000px) {
+    @media screen and (max-width:950px) {
+        .main{
+            height: auto;
+        }
     }
 }

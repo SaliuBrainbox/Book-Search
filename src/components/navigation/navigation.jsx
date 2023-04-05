@@ -38,8 +38,9 @@ const Navigation = () => {
         </div>
         <div className="control-panel">
           <button onClick={logut}> SIGN OUT </button>
-        </div>
-        <div className='nav-menu'>
+        </div>      
+      </div>
+      <div className='nav-menu'>
           
           {
             menu ? 
@@ -53,7 +54,6 @@ const Navigation = () => {
           }
 
         </div>
-      </div>
       <Outlet></Outlet>
     </Fragment>
   )

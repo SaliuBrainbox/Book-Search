@@ -7,7 +7,9 @@ const Menu = () => {
 
     const style = {
         textDecoration: 'none',
-        color: 'white'
+        color: 'white',
+        margin: '5px',
+        borderBottom: '2px solid white',
     }
 
   return (
